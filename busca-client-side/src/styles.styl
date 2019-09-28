@@ -314,6 +314,7 @@ select, textarea
 	border 0
 	background #fff
 	box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+	font_mixin($raleway, 300, 1.4em, #888)
 
 	&:focus
 		outline none
@@ -337,3 +338,85 @@ textarea
 .tit-raleway-purple
 	font-family $Raleway
 	color $purple
+
+
+// ======================================================================== search ===
+.container-search
+	text-align center
+	height 100%
+
+	.aux
+		& > div
+			display flex
+
+			button
+				background-color $purple
+				width 100px
+				border-radius 0 2px 2px 0
+				cursor pointer
+
+	.tit-monaco-black
+		font-size 6em
+		font-weight 700
+		line-height 80px
+
+		em
+			font-weight 200
+			font-style italic
+
+
+.search-result
+	width 100%
+	top 51px
+
+	li
+		border 1px solid #dedede
+		border-top 0
+		width 100%
+		background-color #fff
+		list-style-type none
+
+		a
+			display flex
+			align-items center
+			text-decoration none
+			text-align left
+			padding 5px
+			height 32px
+			font_mixin($raleway, 300, 1.4em, #888)
+
+			&:hover
+				background-color $gray
+				color #fff
+
+
+// ======================================================================== detail user ===
+.detail-user
+	width 95%
+	margin 0 auto
+
+	& > header
+		margin-bottom 53px
+
+		.container-search
+			.aux
+				width 100%
+				display flex
+				align-items center
+
+				h1
+					white-space nowrap
+					margin-right 70px
+					font-size 4em
+
+				& > div
+					width 100%
+
+
+	& > aside
+		background-color red
+
+
+	// & > article
+	// 	background-color blue
+

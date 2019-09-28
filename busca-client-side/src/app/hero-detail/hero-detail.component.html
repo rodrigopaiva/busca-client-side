@@ -1,15 +1,64 @@
-<div *ngIf="hero">
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
-</div>
+<section class="detail-user">
+	<header>
+		<app-hero-search></app-hero-search>
+	</header>
 
 
-<div class="testeeee">
-	<app-hero-search></app-hero-search>
-</div>
+	<aside *ngIf="hero" class="left w-25">
+		<figure class="avatar">
+			<img src="" alt="" />
+		</figure>
+
+		<h2>{{hero.name}}</h2>
+
+		<p>anakinskywalker</p>
+
+		<ul>
+			<li>
+				<i></i> The Galactic Empire
+			</li>
+			<li>
+				<i></i> Tatooine
+			</li>
+			<li>
+				<i></i> 1.000.000
+			</li>
+			<li>
+				<i></i> 4
+			</li>
+			<li>
+				<i></i> 999999999999
+			</li>
+		</ul>
+	</aside>
+
+
+	<article *ngIf="hero" class="right w-70">
+		<ul class="repo-list">
+			<li>
+				<h2 class="tit-raleway-purple">Death Star</h2>
+				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
+				<span class="tit-raleway-black">
+					<i></i> 99999
+				</span>
+			</li>
+			<li>
+				<h2 class="tit-raleway-purple">Death Star</h2>
+				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
+				<span class="tit-raleway-black">
+					<i></i> 99999
+				</span>
+			</li>
+			<li>
+				<h2 class="tit-raleway-purple">Death Star</h2>
+				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
+				<span class="tit-raleway-black">
+					<i></i> 99999
+				</span>
+			</li>
+		</ul>
+	</article>
+</section><!-- detail-user -->
+
+
+<button (click)="goBack()">go back</button>

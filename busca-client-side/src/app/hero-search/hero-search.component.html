@@ -2,14 +2,18 @@
 <section class="container-search w-100 center-v-h">
 	<div class="aux w-65">
 		<h1 class="tit-monaco-black">Github <em class="tit-raleway-black">Search</em></h1>
-			<input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
-			<ul class="search-result">
+		<div class="relative">
+			<input type="text" #searchBox id="search-box" class="w-100" (input)="search(searchBox.value)" />
+			<button>dd</button>
+
+			<ul class="search-result absolute">
 				<li *ngFor="let hero of heroes$ | async" >
 					<a routerLink="/detail/{{hero.id}}">
 						{{hero.name}}
 					</a>
 				</li>
 			</ul>
+		</div>
 	</div><!-- aux -->
 </section><!-- container-search -->
