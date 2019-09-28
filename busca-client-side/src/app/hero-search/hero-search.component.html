@@ -1,0 +1,15 @@
+
+<section class="container-search w-100 center-v-h">
+	<div class="aux w-65">
+		<h1 class="tit-monaco-black">Github <em class="tit-raleway-black">Search</em></h1>
+			<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+			<ul class="search-result">
+				<li *ngFor="let hero of heroes$ | async" >
+					<a routerLink="/detail/{{hero.id}}">
+						{{hero.name}}
+					</a>
+				</li>
+			</ul>
+	</div><!-- aux -->
+</section><!-- container-search -->
