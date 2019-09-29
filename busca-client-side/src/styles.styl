@@ -14,7 +14,9 @@
  - helpers
  - forms
  - titles
- - header
+ - icons
+ - search
+ - detail user
 */
 
 
@@ -314,7 +316,7 @@ select, textarea
 	border 0
 	background #fff
 	box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
-	font_mixin($raleway, 300, 1.4em, #888)
+	font_mixin($Raleway, 300, 1.4em, #888)
 
 	&:focus
 		outline none
@@ -335,9 +337,40 @@ textarea
 	font-family $Raleway
 	color #000
 
+.tit-raleway-gray
+	font-family $Raleway
+	color $gray
+
 .tit-raleway-purple
 	font-family $Raleway
 	color $purple
+
+
+// ======================================================================== icons ===
+.icons
+	width 24px
+	height 24px
+	display block
+
+.followers
+	background url('assets/icons/followers.png') center no-repeat
+
+.location
+	background url('assets/icons/location.png') center no-repeat
+
+.organization
+	background url('assets/icons/organization.png') center no-repeat
+
+.repositorie
+	background url('assets/icons/repositorie.png') center no-repeat
+
+.search
+	background url('assets/icons/search.png') center no-repeat
+	width 37px
+	height 37px
+
+.star
+	background url('assets/icons/star.png') center no-repeat
 
 
 // ======================================================================== search ===
@@ -383,7 +416,7 @@ textarea
 			text-align left
 			padding 5px
 			height 32px
-			font_mixin($raleway, 300, 1.4em, #888)
+			font_mixin($Raleway, 300, 1.4em, #888)
 
 			&:hover
 				background-color $gray
@@ -414,9 +447,27 @@ textarea
 
 
 	& > aside
-		background-color red
 
+		.avatar
+			margin-bottom 12px
 
-	// & > article
-	// 	background-color blue
+			img
+				width 100%
+
+		h2
+			font_mixin($Raleway, 300, 3.5em, #000)
+
+		p
+			font_mixin($Raleway, 300, 2em, $gray)
+			margin-bottom 28px
+
+		ul
+			li
+				font_mixin($Raleway, 300, 2em, $gray)
+				clear both
+				margin-bottom 15px
+
+				i
+					float left
+					margin-right 8px
 

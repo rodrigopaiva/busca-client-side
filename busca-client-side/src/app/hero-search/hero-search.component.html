@@ -5,7 +5,9 @@
 
 		<div class="relative">
 			<input type="text" #searchBox id="search-box" class="w-100" (input)="search(searchBox.value)" />
-			<button>dd</button>
+			<button class="center-v-h">
+				<i class="icons search"></i>
+			</button>
 
 			<ul class="search-result absolute">
 				<li *ngFor="let hero of heroes$ | async" >
