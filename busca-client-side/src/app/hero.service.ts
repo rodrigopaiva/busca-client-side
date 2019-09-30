@@ -10,8 +10,8 @@ import { Hero } from './hero';
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';
-  // private heroesUrl = 'https://api.github.com/users
+  // private heroesUrl = 'api/heroes';
+  private heroesUrl = 'https://api.github.com/users';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -55,7 +55,7 @@ export class HeroService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
+    return this.http.get<Hero[]>(`${this.heroesUrl}/?login=${term}`).pipe(
       catchError(this.handleError<Hero[]>('searchHeroes', []))
     );
   }
