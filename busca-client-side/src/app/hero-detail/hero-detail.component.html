@@ -6,28 +6,28 @@
 
 	<aside *ngIf="hero" class="left w-25">
 		<figure class="avatar">
-			<img src="../assets/lixo/avatar-teste.png" alt="" />
+			<img src="{{hero.avatar_url}}" alt="" />
 		</figure>
 
 		<h2>{{hero.name}}</h2>
 
-		<p>anakinskywalker</p>
+		<p>{{hero.login}}</p>
 
 		<ul>
 			<li>
-				<i class="icons organization"></i> The Galactic Empire
+				<i class="icons organization"></i> {{hero.company}}
 			</li>
 			<li>
-				<i class="icons location"></i> Tatooine
+				<i class="icons location"></i> {{hero.location}}
 			</li>
 			<li>
-				<i class="icons star"></i> 1.000.000
+				<i class="icons star"></i> {{hero.star}}
 			</li>
 			<li>
-				<i class="icons repositorie"></i> 4
+				<i class="icons repositorie"></i> {{hero.public_repos}}
 			</li>
 			<li>
-				<i class="icons followers"></i> 999999999999
+				<i class="icons followers"></i> {{hero.followers}}
 			</li>
 		</ul>
 	</aside>
@@ -35,20 +35,6 @@
 
 	<article *ngIf="hero" class="right w-70">
 		<ul class="repo-list">
-			<li>
-				<h2 class="tit-raleway-purple">Death Star</h2>
-				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
-				<span class="tit-raleway-black">
-					<i class="icons star"></i> 99999
-				</span>
-			</li>
-			<li>
-				<h2 class="tit-raleway-purple">Death Star</h2>
-				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
-				<span class="tit-raleway-black">
-					<i class="icons star"></i> 99999
-				</span>
-			</li>
 			<li>
 				<h2 class="tit-raleway-purple">Death Star</h2>
 				<p class="tit-raleway-black">The most powerful weapon in the universe.</p>
